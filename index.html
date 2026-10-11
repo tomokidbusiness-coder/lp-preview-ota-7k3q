@@ -200,7 +200,7 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
 .letter-end{display:grid;grid-template-columns:1fr 260px;column-gap:28px;align-items:end}
 .letter-end p{grid-column:1;margin:0 0 1.4em}
 .letter-end p:last-of-type{margin-bottom:0}
-.letter-end .sign-card{grid-column:2;grid-row:1/span 2;align-self:end;width:260px;margin:0 14px 0 0}
+.letter-end .sign-card{grid-column:2;grid-row:1/span 3;align-self:end;width:260px;margin:0 14px 0 0}
 @media(max-width:599px){
  .letter-end{display:grid;grid-template-columns:minmax(0,1fr);column-gap:0;gap:1.4em}
  .letter{padding:26px 18px}
@@ -299,6 +299,21 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
 .prog .take{margin-bottom:0}
 .prog-ill{width:100%;height:auto;justify-self:center}
 @media(min-width:760px){.prog{grid-template-columns:1fr 190px;gap:24px}}
+
+/* ---- 根本さん修正依頼（2026-10-11） ---- */
+.rec{display:block;margin-top:.35em;font-weight:700}
+.rec small,.info .rex{display:block;font-size:.82em;font-weight:500;line-height:1.65;margin-top:.15em}
+.simple-apply .sa-box{max-width:620px;margin-inline:auto;display:grid;gap:18px}
+.simple-apply .hdate{font-size:clamp(1.05rem,3vw,1.25rem);text-align:left}
+.simple-apply .btns{max-width:none;width:100%}
+.final.simple-apply{background:#fff}
+.letter-end .sig{text-align:right;line-height:1.7;color:var(--blue);font-weight:700;font-size:1rem}
+.letter-end .sig b{display:block;font-size:1.5rem;font-weight:900;color:var(--ink)}
+.faq summary{align-items:center}
+.faq summary::after{content:"答えを見る ＋";margin-left:auto;flex:none;font-size:.72em;font-weight:900;color:#fff;background:var(--blue);border-radius:999px;padding:.25em .9em;white-space:nowrap}
+.faq details[open] summary::after{content:"閉じる －";background:#8aa7c1}
+@media(max-width:599px){.faq summary::after{content:"＋";width:1.9em;height:1.9em;padding:0;display:grid;place-items:center;font-size:.95em}.faq details[open] summary::after{content:"－"}}
+@media(min-width:760px){.hero .hcap{left:47%;right:auto;top:auto;bottom:115px;transform:translateX(-50%);text-align:center;white-space:nowrap}}
 @media(max-width:599px){.sp{display:inline}.pc{display:none}.happen li{font-size:1rem}.change .emph{font-size:1.45rem;line-height:2}.change p{line-height:2.1}.change p.then{line-height:1.8}.change p+p{margin-top:.7em}.prog{grid-template-columns:1fr}.prog-ill{display:none}}
 </style></head><body>
 
@@ -313,7 +328,7 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
    <li class="case"><p>注意すると、<span class="nw">言い訳しか</span>返ってこない。</p></li>
   </ul>
   <p class="hlead">そんな職場のリアルな「困った場面」を題材に、<b>みんなでワイワイガヤガヤ話しながら</b>考えます。</p>
-  <p class="hdate"><b>日時：11/22（日）10:00〜12:00</b><br>会場：新横浜＋ライブ配信<br>参加費：<span class="nw">会場 2,000円</span>／<span class="nw">ライブ配信 1,500円</span></p>
+  <p class="hdate"><b>日時：11/22（日）10:00〜12:00</b><br>会場：新横浜＋ライブ配信<br>参加費：<span class="nw">会場 2,000円</span>／<span class="nw">ライブ配信 1,500円</span><br><span class="rec">こんな方におすすめ：相手との関係を壊さずに、伝えるべきことを伝えたい方<small>（例：部下や後輩を持つリーダー・管理職／子育て中の方／業者さんや取引先とやりとりする自営業の方）</small></span></p>
   <div class="btns">
    <a class="btn" href="#apply">会場で参加する<small>2,000円</small></a>
    <a class="btn b" href="#apply">ライブ配信で参加する<small>1,500円</small></a>
@@ -382,20 +397,24 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
 
 <!-- D-2 変化の姿 -->
 <section><div class="wrap">
- <h2><span>当日</span>は、<br class="sp">こんなことが起こります。</h2>
+ <h2>たとえば、こんな場面に役立つ<br class="sp">方法を持ち帰れます。</h2>
  <ul class="happen">
-  <li>悩んでいるのは、<br class="sp">自分だけではなかったとわかる。</li>
-  <li>知識として得るだけでなく、<br class="sp">口に出して試すから、<br class="sp">本番で伝わる言葉が出てくる。</li>
-  <li>自分には思いつかなかった言葉が、<br class="sp">隣の人から見つかる。</li>
+  <li>「でも」「だって」と言い訳が返ってくる部下に、適切な指導をしたい</li>
+  <li>何度言っても宿題を後回しにする子どもに、感情的にならずに伝えたい</li>
+  <li>納期遅れが続く業者さんに、関係を崩さず改善をお願いしたい</li>
  </ul>
 </div></section>
-<div class="change"><div class="wrap">
- <p class="then">そして、帰る頃には、こうなります。</p>
- <p>叱ることへの不安が、<mark>軽くなる。</mark></p>
- <p><mark>言えなかった一言</mark>が、<br class="sp">言えるようになる。</p>
- <p class="emph">もう、<br class="sp"><mark>一人で悩み続けなくていい。</mark></p>
- <div class="btns change-btn"><a class="btn" href="#apply">会場で参加する<small>2,000円</small></a><a class="btn b" href="#apply">ライブ配信で参加する<small>1,500円</small></a></div>
-</div></div>
+
+<!-- D-3 申込み（シンプル） -->
+<section class="sky simple-apply"><div class="wrap">
+ <div class="sa-box">
+  <p class="hdate"><b>日時：11/22（日）10:00〜12:00</b><br>会場：新横浜＋ライブ配信<br>参加費：<span class="nw">会場 2,000円</span>／<span class="nw">ライブ配信 1,500円</span><br><span class="rec">こんな方におすすめ：相手との関係を壊さずに、伝えるべきことを伝えたい方<small>（例：部下や後輩を持つリーダー・管理職／子育て中の方／業者さんや取引先とやりとりする自営業の方）</small></span></p>
+  <div class="btns">
+   <a class="btn" href="#apply">会場で参加する<small>2,000円</small></a>
+   <a class="btn b" href="#apply">ライブ配信で参加する<small>1,500円</small></a>
+  </div>
+ </div>
+</div></section>
 
 <!-- A-1 登壇者 -->
 <section class="alt"><div class="wrap">
@@ -435,6 +454,7 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
   <div><dt>参加費</dt><dd>会場 2,000円／ライブ配信 1,500円</dd></div>
   <div><dt>定員</dt><dd>会場 50名</dd></div>
   <div><dt>お支払い</dt><dd>PayPalでの事前決済</dd></div>
+  <div><dt>こんな方におすすめ</dt><dd>相手との関係を壊さずに、伝えるべきことを伝えたい方<small class="rex">（例：部下や後輩を持つリーダー・管理職／子育て中の方／業者さんや取引先とやりとりする自営業の方）</small></dd></div>
   <div><dt>アーカイブ</dt><dd>当日ご覧になれない方には、お送りします</dd></div>
  </dl>
 </div></section>
@@ -475,19 +495,22 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
    <p>だから、伝えたいのです。<br>叱ることは、相手を否定することではありません。<br>「あなたなら、もっとできる」と信じて、相手の未来のために<span class="nw">伝えることです。</span></p>
    <p>この想いを、10年ぶり3冊目の著書<span class="nwd">『リーダー1年目の叱り方の教科書』に込めました。</span></p>
    <div class="letter-end">
-    <figure class="sign-card"><img src="img/ota.jpg" alt="太田章代"><figcaption>太田 章代</figcaption></figure>
+    <figure class="sign-card"><img src="img/ota.jpg" alt="太田章代"></figure>
    <p>伝え方に、<span class="nw">ひとつの正解はありません。</span><br>だからこそ当日は、<span class="nw">皆さんと語り合いながら、</span><span class="nw">私自身も一緒に</span><span class="nw">学ばせていただきます。</span></p>
    <p>部下のことで悩んでいる、<span class="nw">あなたにこそ</span>来ていただきたい。<br>会場で、そして画面の向こうで、<span class="nw">お会いできることを心から</span><span class="nw">楽しみにしています。</span></p>
+   <p class="sig">著者／アイキャリア株式会社 代表取締役<br><b>太田章代</b></p>
    </div>
  </div>
 </div></section>
 
-<!-- A-5 最後の一言 -->
-<section class="final"><i class="c3"></i><i class="c4"></i><div class="wrap">
- <p class="big"><span class="nw">伝え方がわかると、</span><em>相手は変わる。</em><br>その一歩を、この日に。</p>
- <div class="btns">
-  <a class="btn" href="#apply">会場で参加する<small>2,000円</small></a>
-  <a class="btn b" href="#apply">ライブ配信で参加する<small>1,500円</small></a>
+<!-- A-5 最後の申込み -->
+<section class="final simple-apply"><i class="c3"></i><i class="c4"></i><div class="wrap">
+ <div class="sa-box">
+  <p class="hdate"><b>日時：11/22（日）10:00〜12:00</b><br>会場：新横浜＋ライブ配信<br>参加費：<span class="nw">会場 2,000円</span>／<span class="nw">ライブ配信 1,500円</span><br><span class="rec">こんな方におすすめ：相手との関係を壊さずに、伝えるべきことを伝えたい方<small>（例：部下や後輩を持つリーダー・管理職／子育て中の方／業者さんや取引先とやりとりする自営業の方）</small></span></p>
+  <div class="btns">
+   <a class="btn" href="#apply">会場で参加する<small>2,000円</small></a>
+   <a class="btn b" href="#apply">ライブ配信で参加する<small>1,500円</small></a>
+  </div>
  </div>
 </div></section>
 
