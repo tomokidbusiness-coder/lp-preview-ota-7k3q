@@ -199,13 +199,14 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
 .sign-card figcaption small{display:block;font-size:.55em;font-weight:700;opacity:.92;letter-spacing:.04em}
 .letter-end{display:grid;grid-template-columns:1fr 260px;column-gap:28px;align-items:end}
 .letter-end p{grid-column:1;margin:0 0 1.4em}
+.letter-end p:first-of-type{grid-column:1/-1}
 .letter-end p:last-of-type{margin-bottom:0}
-.letter-end .sign-card{grid-column:2;grid-row:1/span 3;align-self:end;width:260px;margin:0 14px 0 0}
+.letter-end .sign-card{grid-column:2;grid-row:2/span 2;align-self:end;width:260px;margin:0 14px 0 0}
 @media(max-width:599px){
  .letter-end{display:grid;grid-template-columns:minmax(0,1fr);column-gap:0;gap:1.4em}
  .letter{padding:26px 18px}
  .letter p{font-size:1rem}
- .letter-end p{grid-column:auto;margin:0}
+ .letter-end p,.letter-end p:first-of-type{grid-column:auto;margin:0}
  .letter-end .sign-card{grid-column:auto;grid-row:auto;order:2;float:none;justify-self:end;width:min(280px,82%);margin:8px 14px 8px 0}
 }
 
