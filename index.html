@@ -328,7 +328,7 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
 .tgt{display:block;margin-top:.3em;font-size:.82em;font-weight:500;line-height:1.65}
 .hero .kind b{display:block!important;margin:0 0 .15em!important;font-size:1.05em;font-weight:900;opacity:1;letter-spacing:.02em;white-space:nowrap}
 .hero .kind span{display:block;font-size:1.25em}
-@media(max-width:759px){.hero .kind b{font-size:.98em}}
+@media(max-width:759px){.hero .kind b{font-size:min(.98em,calc((100vw - 64px)/15.8))}}
 @media(max-width:759px){
 .hero .wrap{padding-top:0!important;grid-template-rows:120px}
 .hero .kind{align-self:center;justify-self:center}
@@ -336,7 +336,7 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
 }
 @media(max-width:759px){
 .hero .kind{text-align:center}
-.hero h1{justify-self:center;text-align:center}
+.hero h1{justify-self:center;text-align:center;white-space:nowrap;font-size:min(2.2rem,calc((100vw - 32px)/8.8))!important}
 h2.ctr,.sub-h{text-align:center}
 .story .body .nw{white-space:normal}
 }
