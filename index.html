@@ -1,18 +1,15 @@
 <!doctype html>
 <html lang="ja"><head>
 <meta name="robots" content="noindex,nofollow">
-<!-- ▼SNSカード（LINE・X・Facebookなどに貼ったときの表示）の設定
-     下の「https://tomokidbusiness-coder.github.io/lp-preview-ota-7k3q/」を、LPを置く場所のURLに書き換えてください（2か所）。
-     例）LPが https://example.com/seminar/ にある場合 → https://example.com/seminar/img/og.jpg
-     画像（img/og.jpg）は、imgフォルダごとアップロードすれば一緒に置かれます。 -->
+<!-- ▼SNSカード（LINE・X・Facebookなどに貼ったときの表示）。LPのURLを変えたときは、下の2か所のURLも直してください -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="『リーダー1年目の叱り方の教科書』出版記念セミナー">
 <meta property="og:description" content="これ、どう叱る？ 2026年11月22日（日）10:00〜12:00／新横浜＋ライブ配信">
-<meta property="og:image" content="https://tomokidbusiness-coder.github.io/lp-preview-ota-7k3q/img/og.jpg">
+<meta property="og:image" content="https://lp.i-career.co.jp/shikaru-semi/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://tomokidbusiness-coder.github.io/lp-preview-ota-7k3q/img/og.jpg">
+<meta name="twitter:image" content="https://lp.i-career.co.jp/shikaru-semi/img/og.jpg">
 <!-- ▲ここまで --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>『リーダー1年目の叱り方の教科書』出版記念セミナー</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +69,7 @@ section h2 span{background:var(--red);color:#fff;border-radius:8px;padding:0 .3e
 /* CASE */
 .cases{display:grid;gap:12px;width:100%;max-width:560px;counter-reset:c}
 .case{counter-increment:c;background:#fff;border-radius:14px;border-left:10px solid var(--red);padding:12px 20px;box-shadow:0 3px 0 #ecdcae}
-.case::before{content:"CASE 0" counter(c);display:block;font-size:.8rem;font-weight:900;letter-spacing:.12em;color:var(--red)}
+.case::before{content:"CASE 0" counter(c);display:block;font-size:1rem;font-weight:900;letter-spacing:.12em;color:var(--red)}
 .case p{font-weight:900;font-size:clamp(1.1rem,3.4vw,1.4rem)}
 
 /* 3,4 */
@@ -249,7 +246,7 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
 @media(min-width:760px){
  .hero .hr{width:56%}
  .hero .hbook{left:auto;right:6%;bottom:44px}
- .hero .hbook{width:min(165px,24%);right:5%}
+ .hero .hbook{width:min(300px,24%);right:5%}
  .hcap{right:auto;left:19%;bottom:34px;text-align:left}
  .hcap small{font-size:clamp(.85rem,1.3vw,1.05rem)}
  .hcap b{font-size:clamp(1.6rem,3vw,2.4rem)}
@@ -265,12 +262,12 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
 @media(min-width:760px){.hero .wrap{padding-top:36px;padding-bottom:48px}}
 /* 写真を少し上へ／肩書きはボタンと同じ高さに（パソコン幅） */
 @media(min-width:760px){
- .hero .hphoto{object-position:60% 32%}
+ .hero .hphoto{object-position:60% 14%}
  .hcap{bottom:48px}
  .hero .hbook{bottom:48px}
 }
 /* 本を大きく（人物の髪に少しかかる） */
-@media(min-width:760px){.hero .hbook{width:min(250px,36%);right:2%}.hcap small{font-size:.85rem}}
+@media(min-width:760px){.hero .hbook{right:5%}.hcap small{font-size:.85rem}}
 /* 肩書きを大きくして、人物の胸の真ん中あたりへ（パソコン幅） */
 @media(min-width:760px){
  .hcap{left:39.5%;right:auto;bottom:auto;top:587px;transform:translateX(-50%);text-align:center;white-space:nowrap}
@@ -329,18 +326,22 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
 .faq details[open] summary::after{content:"閉じる －";background:#8aa7c1}
 @media(max-width:599px){.faq summary::after{content:"＋";width:1.9em;height:1.9em;padding:0;display:grid;place-items:center;font-size:.95em}.faq details[open] summary::after{content:"－"}}
 .tgt{display:block;margin-top:.3em;font-size:.82em;font-weight:500;line-height:1.65}
+.hero .kind b{display:block!important;margin:0 0 .15em!important;font-size:1.05em;font-weight:900;opacity:1;letter-spacing:.02em;white-space:nowrap}
+.hero .kind span{display:block;font-size:1.25em}
+@media(max-width:759px){.hero .kind b{font-size:.98em}}
+@media(max-width:759px){.hero .hcap small{font-size:.74rem;white-space:nowrap}}
 .pcbr{display:none}
 @media(min-width:760px){.pcbr{display:inline}
 .hero .hl{max-width:640px}
 .hero .kind{white-space:nowrap}.hero .kind b{display:inline;margin-right:.5em}
 .hero .case{display:flex;align-items:center;gap:1.1em}.hero .case::before{display:block;white-space:nowrap}.hero .case p{white-space:nowrap}
 .hero .rec{white-space:nowrap}.hero .rec small{white-space:normal}}
-@media(min-width:760px){.hero .rec{font-size:min(.92em,1.5vw)}.hero .hl{margin-left:3.5vw;max-width:min(680px,58vw)}}
+@media(min-width:760px){.hero .rec{font-size:min(.92em,1.5vw)}.hero .hl{margin-left:max(16vw,calc(18vw - 150px))}}
 @media(min-width:760px){.hero .wrap{width:min(1600px,100% - 7vw)}.hero .hl{max-width:620px}
 .simple-apply .sa-box{max-width:1040px;grid-template-columns:1.5fr 1fr;align-items:stretch;gap:28px}
 .simple-apply .btns{grid-template-columns:1fr;align-content:center;gap:18px}
 .simple-apply .btns .btn{padding:1.1em .6em}}
-@media(min-width:760px){.hero .hcap{left:47%;right:auto;top:auto;bottom:70px;transform:translateX(-50%);text-align:center;white-space:nowrap}}
+@media(min-width:760px){.hero .hcap{left:47%;right:auto;top:auto;bottom:50px;transform:translateX(-50%);text-align:center;white-space:nowrap}}
 @media(max-width:599px){.sp{display:inline}.pc{display:none}.happen li{font-size:1rem}.change .emph{font-size:1.45rem;line-height:2}.change p{line-height:2.1}.change p.then{line-height:1.8}.change p+p{margin-top:.7em}.prog{grid-template-columns:1fr}.prog-ill{display:none}}
 </style></head><body>
 
@@ -354,14 +355,14 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
    <li class="case"><p>何度言っても、<span class="nw">同じミスが</span>直らない。</p></li>
    <li class="case"><p>注意すると、<span class="nw">言い訳しか</span>返ってこない。</p></li>
   </ul>
-  <p class="hlead">そんな職場のリアルな「困った場面」を題材に、<br class="pcbr"><b>みんなでワイワイガヤガヤ話しながら</b>考えます。</p>
+  <p class="hlead">そんな職場のリアルな「困った場面」を題材に、<br class="pcbr"><b>叱り方のスキルの習得と、<span class="nw">みんなで答えを考える2時間</span></b></p>
   <p class="hdate"><b>日時：11/22（日）10:00〜12:00</b><br>会場：新横浜＋ライブ配信<br>参加費：<span class="nw">会場 2,000円</span>／<span class="nw">ライブ配信 1,500円</span><span class="tgt">対象者：部下や後輩を持つリーダー・管理職／子育て中の方／<br class="pcbr">業者さんや取引先とやりとりする自営業の方</span></p>
   <div class="btns">
    <a class="btn" href="https://my85p.com/p/r/w0bU6GAf">会場で参加する<small>2,000円</small></a>
    <a class="btn b" href="https://my85p.com/p/r/xLix3UAx">ライブ配信で参加する<small>1,500円</small></a>
   </div>
  </div>
- <div class="hr"><div class="hset"><img class="hphoto" src="img/ota.jpg" alt="太田章代"><img class="hbook" src="img/cover.png" alt="書籍表紙『リーダー1年目の叱り方の教科書』"><p class="hcap"><small>著者／アイキャリア株式会社<br>代表取締役</small><b>太田章代</b></p></div></div>
+ <div class="hr"><div class="hset"><img class="hphoto" src="img/ota.jpg" alt="太田章代"><img class="hbook" src="img/cover.png" alt="書籍表紙『リーダー1年目の叱り方の教科書』"><p class="hcap"><small>著者／アイキャリア株式会社 代表取締役<br>人材育成トレーナー</small><b>太田章代</b></p></div></div>
 </div></div>
 
 
@@ -369,7 +370,7 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
 <section class="sky"><div class="wrap">
  <h2><span>言いたい</span>のに、<br class="sp">言いにくい時代です。</h2>
  <div class="panel">
-  <p>令和の今の時代、ハラスメントを意識しすぎて、相手の問題行動に気づいても、何も言えない。褒めて育てる教育が主流になり、叱られて落ち込んでしまう人も増えています。</p>
+  <p>令和の今、ハラスメントを意識しすぎて、相手の問題行動に気づいても、何も言えない。褒めて育てる教育が主流になり、叱られて落ち込んでしまう人も増えています。</p>
   <p class="strong">だからこそ、関係を崩さずに、ちゃんと伝える方法が求められています。</p>
  </div>
 </div></section>
@@ -380,7 +381,7 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
  <div class="story">
   <img class="ota" src="img/konwaku.jpg" alt="困り顔の太田章代">
   <div class="body">
-   <p>30歳で、はじめて営業部のリーダーになりました。部下の改善点が<span class="nw">目につくのに、</span><span class="nw">勇気が出せず、</span><span class="nw">見て見ぬふりを</span>していました。</p>
+   <p>私は<span class="nw">30歳で、</span><span class="nw">はじめて営業部の</span>リーダーになりました。<br class="pcbr">リーダーになってからは、部下の改善点が<span class="nw">目につくのに、</span><br class="pcbr"><span class="nw">叱る勇気が出せず、</span><span class="nw">見て見ぬふりを</span>していました。</p>
    <p>見かねた上司に言われたのは、「リーダーの役割として、<span class="nw">嫌われ者になりなさい</span>」。<span class="nw">勇気を出して伝えたものの、</span><span class="nw">叱り方を知らず、</span><span class="nw">強い言葉になってしまいました。</span></p>
    <p>売上が伸びない部下も、悩む私も、誰も幸せになっていませんでした。</p>
    <p class="lead-h">そんな私が、大切にしている叱り方をお伝えし、一緒に考えます。</p>
@@ -407,7 +408,7 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
 <section class="alt"><div class="wrap">
  <h2><span>当日</span>のセミナー内容</h2>
  <div class="wai">
-  <p class="t">みんなでワイワイ、<br class="sp">考える2時間</p>
+  <p class="t">叱り方のスキルの習得と、<br class="sp">みんなで答えを考える2時間</p>
   <p>職場のリアルな「困った場面」を題材に、「あなたならどう伝える？」を、<span class="nw">みんなで話しながら考えます。</span></p>
   <p class="strong">人との話し合いの中から、<br class="sp">新たな答えが見つかります。</p>
  </div>
@@ -449,7 +450,7 @@ h1,h2,h3,.case p,.btn,.t,.tail,.then,.emph{text-wrap:balance}
  <div class="author">
   <img class="ota" src="img/ota.jpg" alt="太田章代">
   <div>
-   <p class="role">アイキャリア株式会社 代表取締役／人材育成トレーナー／ビジネスコミュニケーション専門家</p>
+   <p class="role">著者／アイキャリア株式会社 代表取締役<br>人材育成トレーナー</p>
    <h3>太田 章代<small>（おおた あきよ）</small></h3>
    <p class="prof">前職の営業職で、6年連続トップ。実績を認められ統括本部長として、<span class="nw">求人誌2誌・PR情報誌1誌の</span>立ち上げに携わりました。<br>2006年に独立。講師未経験から、独学で講師業をスタートし、<span class="nw">講師歴20年以上。</span></p>
    <p class="strong big2"><span class="nw">登壇2,000回以上。</span><span class="nw">受講者は延べ5万人以上。</span></p>
