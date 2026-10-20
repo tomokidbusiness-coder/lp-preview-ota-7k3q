@@ -352,6 +352,13 @@ h2.ctr,.sub-h{text-align:center}
 .pr-frame{max-width:880px;margin-inline:auto;border-radius:18px;overflow:hidden;box-shadow:0 8px 0 var(--yellow),0 10px 26px rgba(29,59,87,.18);background:#000;aspect-ratio:16/9}
 .pr-frame video{display:block;width:100%;height:100%;object-fit:contain;background:#000}
 @media(max-width:759px){.pr-video{padding:36px 0 44px}.pr-frame{border-radius:14px}}
+.corp{margin-top:22px;padding-top:20px;border-top:1px solid rgba(207,225,242,.35);line-height:1.8}
+.corp-name{font-weight:900;font-size:1rem;color:#fff}
+.corp-addr{font-size:.85rem}
+.corp-links{margin-top:6px;font-size:.85rem;display:flex;flex-wrap:wrap;justify-content:center;gap:.2em .5em}
+.corp-links a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.corp-links span{opacity:.6}
+@media(max-width:480px){.corp-links{flex-direction:column;align-items:center;gap:.3em}.corp-links span{display:none}}
 .pcbr{display:none}
 @media(min-width:760px){.pcbr{display:inline}
 .hero .hl{max-width:640px}
@@ -570,7 +577,13 @@ h2.ctr,.sub-h{text-align:center}
  </div>
 </div></section>
 
-<footer class="foot"><p>『リーダー1年目の叱り方の教科書』出版記念セミナー<span class="pc">　</span><br class="sp">2026年11月22日（日）10:00〜12:00<span class="pc">／</span><br class="sp">新横浜駅周辺＋ライブ配信</p></footer>
+<footer class="foot"><p>『リーダー1年目の叱り方の教科書』出版記念セミナー<span class="pc">　</span><br class="sp">2026年11月22日（日）10:00〜12:00<span class="pc">／</span><br class="sp">新横浜駅周辺＋ライブ配信</p>
+<div class="corp">
+ <p class="corp-name">アイキャリア株式会社</p>
+ <p class="corp-addr">〒102-0084 東京都千代田区二番町9-3</p>
+ <p class="corp-links"><a href="https://i-career.co.jp/company/" target="_blank" rel="noopener">会社概要</a><span>｜</span><a href="https://i-career.co.jp/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a><span>｜</span><a href="https://i-career.co.jp/tokusyo/" target="_blank" rel="noopener">特定商取引法に基づく表記</a></p>
+</div>
+</footer>
 <script>
 /* パソコン幅：画面の高さに合わせてトップ全体を縮め、ボタンまで1画面に収める */
 (function(){
