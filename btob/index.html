@@ -614,6 +614,19 @@ h2.ctr,.sub-h{text-align:center}
  .hl .corp-wrap{order:7;justify-self:center}
  .hero .hphoto{aspect-ratio:1/0.72!important}
 }
+/* 11/1 トップのデザイン調整：ドット柄なし／見出しの下に赤い短線／余白を整える */
+.hero::before,.hero::after,.hero .c3,.hero .c4{display:none!important}
+.hero h1::after{content:"";display:block;width:64px;height:6px;border-radius:3px;background:var(--red);margin-top:18px}
+.hero .hsub{margin-top:2px}
+@media(min-width:760px){
+ .hero .hl{gap:16px}
+ .hero .kind{margin-bottom:6px}
+ .hero .hsub{font-size:clamp(1.4rem,2vw,1.9rem)}
+ .hero .hday{margin-top:18px}
+}
+@media(max-width:759px){
+ .hero h1::after{margin:12px auto 0;width:52px;height:5px}
+}
 </style></head><body>
 
 
@@ -626,7 +639,6 @@ h2.ctr,.sub-h{text-align:center}
   <p class="hday"><b>12/5<small>（土）</small></b><span>10:30〜12:00</span></p>
   <dl class="hdate hinfo">
    <div><dt>会場</dt><dd>品川駅周辺</dd></div>
-   <div><dt>参加費</dt><dd><span class="nw">書籍持参の方 1,000円</span><br><span class="nw">サイン本付き 現地購入の方 2,760円</span><span class="nw">（本代込み）</span></dd></div>
    <div><dt>対象</dt><dd>部下を持つ上司・リーダーの方<span class="tgt">法人での複数名参加も歓迎です</span></dd></div>
   </dl>
   <div class="btns two">
