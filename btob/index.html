@@ -586,6 +586,17 @@ h2.ctr,.sub-h{text-align:center}
  .wai .nw{white-space:normal}
  .final::before,.final::after,.final .c3,.final .c4{display:none}
 }
+/* 11/1 本の紹介を「私も悩んでいました」の最後に小さく／背景の交互を付け直し */
+.bookmini{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:center;background:var(--cream);border-radius:16px;padding:18px 22px;margin-top:6px}
+.bookmini img{width:100%;border-radius:3px;box-shadow:0 6px 16px rgba(29,59,87,.25)}
+.bookmini > div{display:grid;gap:8px}
+.bookmini p{font-weight:700;line-height:1.7}
+.bookmini b{color:var(--ink);font-weight:900}
+@media(max-width:759px){.bookmini{grid-template-columns:96px 1fr;gap:14px;padding:14px 14px}.bookmini p{font-size:.95rem}.bookmini .lead-h{font-size:1.05rem!important}}
+.take li{background:#fff}
+.happen li{background:var(--cream)}
+.results>div{background:#fff}
+.bookmini .nw{white-space:nowrap!important}
 </style></head><body>
 
 
@@ -657,28 +668,19 @@ h2.ctr,.sub-h{text-align:center}
    <p>私は<span class="nw">30歳で、</span><span class="nw">はじめて営業部の</span>リーダーになりました。<br class="pcbr">リーダーになってからは、部下の改善点が<span class="nw">目につくのに、</span><br class="pcbr"><span class="nw">叱る勇気が出せず、</span><span class="nw">見て見ぬふりを</span>していました。</p>
    <p>見かねた上司に言われたのは、「リーダーの役割として、<span class="nw">嫌われ者になりなさい</span>」。<span class="nw">勇気を出して伝えたものの、</span><span class="nw">叱り方を知らず、</span><span class="nw">強い言葉になってしまいました。</span></p>
    <p>売上が伸びない部下も、悩む私も、誰も幸せになっていませんでした。</p>
-   <p class="lead-h">そんな私が、大切にしている叱り方をお伝えし、一緒に考えます。</p>
-  </div>
- </div>
-</div></section>
-
-<!-- 5 本の紹介 -->
-<section class="alt"><div class="wrap">
- <h2 class="ctr"><span>あのときの悩み</span>も、失敗も。<br>すべて、この一冊に詰め込みました。</h2>
- <div class="book">
-  <img class="cover" src="img/cover.png" alt="書籍表紙『リーダー1年目の叱り方の教科書』">
-  <div class="body">
-   <p class="role">ぱる出版</p>
-   <h3>『リーダー1年目の叱り方の教科書』</h3>
-   <p class="strong">あなたの一言が、<span class="nw">部下とチームの未来を変える！</span></p>
-   <p>本に書いたのは、理想論ではありません。<br>リーダーとして部下との関係に悩み、自分の未熟さに落ち込み、<span class="nw">失敗を重ねながら</span>見つけた答えです。<br>その答えを、多くの研修の現場で実践と検証を重ね、<span class="nw">再現しやすい方法に</span>進化させました。</p>
-   <p class="lead-h">この本の出版を記念して、<br class="sp">セミナーを開催します。</p>
+   <div class="bookmini">
+    <img src="img/cover.png" alt="書籍表紙『リーダー1年目の叱り方の教科書』">
+    <div>
+     <p>その経験をまとめたのが<br class="pcbr"><b>『リーダー1年目の叱り方の教科書』</b><span class="nw">（ぱる出版）です。</span></p>
+     <p class="lead-h">この本の出版を記念して、<br class="sp">セミナーを開催します。</p>
+    </div>
+   </div>
   </div>
  </div>
 </div></section>
 
 <!-- D-1 当日の中身 -->
-<section><div class="wrap">
+<section class="alt"><div class="wrap">
  <h2 class="ctr"><span>当日</span>のセミナー内容</h2>
  <div class="wai">
   <p class="t">90分で、叱り方の「型」を身につけます。</p>
@@ -695,7 +697,7 @@ h2.ctr,.sub-h{text-align:center}
 </div></section>
 
 <!-- D-2 変化の姿 -->
-<section class="alt"><div class="wrap">
+<section><div class="wrap">
  <h2 class="ctr">たとえば、こんな場面に役立つ<br class="sp">方法を持ち帰れます。</h2>
  <ul class="happen">
   <li>「でも」「だって」と言い訳が返ってくる部下に、適切な指導をしたい</li>
@@ -705,7 +707,7 @@ h2.ctr,.sub-h{text-align:center}
 </div></section>
 
 <!-- A-1 登壇者 -->
-<section><div class="wrap">
+<section class="alt"><div class="wrap">
  <h2 class="ctr"><span>登壇者</span>紹介</h2>
  <div class="author">
   <img class="ota" src="img/ota.jpg" alt="太田章代">
@@ -733,7 +735,7 @@ h2.ctr,.sub-h{text-align:center}
 </div></section>
 
 <!-- A-2 開催概要 -->
-<section class="alt"><div class="wrap">
+<section><div class="wrap">
  <h2 class="ctr"><span>開催</span>概要</h2>
  <dl class="info">
   <div><dt>日時</dt><dd><span class="nw">2026年12月5日（土）</span><span class="nw">10:30〜12:00</span></dd></div>
@@ -746,7 +748,7 @@ h2.ctr,.sub-h{text-align:center}
 </div></section>
 
 <!-- A-4 よくある質問 -->
-<section><div class="wrap">
+<section class="alt"><div class="wrap">
  <h2 class="ctr"><span>よくある</span>質問</h2>
  <div class="faq">
   <details><summary>管理職でなくても参加できますか？</summary><p>参加いただけます。部下や後輩への伝え方はもちろん、同僚とのやりとりや、個人事業主の方が取引先などに伝える場面にも活かせます。</p></details>
