@@ -677,6 +677,24 @@ h2.ctr,.sub-h{text-align:center}
  .hero h1.stair .ul{animation:ulIn .6s .9s ease-out both}
 }
 @keyframes ulIn{from{background-size:0 .13em}to{background-size:100% .13em}}
+/* 11/1 見出しの空きに悩みの吹き出し（パソコン幅のみ）／著者名を白い札に */
+.hero .bub{display:none}
+@media(min-width:760px){
+ .hero h1.stair{position:relative}
+ .hero .bub{display:block;position:absolute;font-style:normal;font-size:clamp(14px,1.25vw,17px);font-weight:700;letter-spacing:0;line-height:1.4;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:14px;padding:.5em .9em;white-space:nowrap}
+ .hero .bub::after{content:"";position:absolute;width:12px;height:12px;background:#fff;border:2px solid var(--ink);border-top:0;border-left:0}
+ .hero .b1{left:35%;top:6%;transform:rotate(-3deg)}
+ .hero .b1::after{left:22px;bottom:-8px;transform:rotate(45deg)}
+ .hero .b2{left:4%;bottom:9%;transform:rotate(2deg)}
+ .hero .b2::after{right:-8px;top:50%;margin-top:-6px;transform:rotate(-45deg)}
+ .hero .hcap{background:rgba(255,255,255,.92);border-left:4px solid var(--ink);border-radius:10px;padding:.6em 1.1em .5em;text-align:left;text-shadow:none;box-shadow:0 4px 14px rgba(29,59,87,.10)}
+}
+@media(min-width:760px) and (prefers-reduced-motion:no-preference){
+ .hero .bub{animation:bubIn .5s ease-out both}
+ .hero .b1{animation-delay:1.3s}
+ .hero .b2{animation-delay:1.55s}
+}
+@keyframes bubIn{from{opacity:0}to{opacity:1}}
 </style></head><body>
 
 
@@ -684,7 +702,7 @@ h2.ctr,.sub-h{text-align:center}
 <div class="hero"><i class="c3"></i><i class="c4"></i><div class="wrap">
  <div class="hl">
   <p class="kind"><b>『リーダー1年目の叱り方の教科書』</b><span>出版記念セミナー</span></p>
-  <h1 class="stair"><span class="l1">部下の</span><span class="l2">成長のための</span><span class="l3"><span class="ul">叱り方</span></span></h1>
+  <h1 class="stair"><span class="l1">部下の</span><span class="l2">成長のための</span><span class="l3"><span class="ul">叱り方</span></span><i class="bub b1" aria-hidden="true">何度言っても直らない…</i><i class="bub b2" aria-hidden="true">言い訳ばかりする部下に…</i></h1>
   <p class="hsub">部下が伸びる伝え方を習得する<b>90分</b></p>
   <p class="hday"><b>12/5<small>（土）</small></b><span>10:30〜12:00</span></p>
   <dl class="hdate hinfo">
