@@ -579,6 +579,13 @@ h2.ctr,.sub-h{text-align:center}
  .sbar .btn.b{box-shadow:0 3px 0 #1d5f9a}
 }
 
+/* 11/1 スマホ修正：写真の高さを画面の高さに連動させない（スクロールで伸び縮みしないように）／トップのボタンはスマホでは出さない（画面下の固定ボタンに任せる）／当日の箱の文がはみ出さないように */
+@media(max-width:759px){
+ .hero .hphoto{height:auto!important;aspect-ratio:1/0.92;object-position:60% 10%}
+ .hero .btns.two{display:none}
+ .wai .nw{white-space:normal}
+ .final::before,.final::after,.final .c3,.final .c4{display:none}
+}
 </style></head><body>
 
 
@@ -689,7 +696,7 @@ h2.ctr,.sub-h{text-align:center}
 
 <!-- D-2 変化の姿 -->
 <section class="alt"><div class="wrap">
- <h2>たとえば、こんな場面に役立つ<br class="sp">方法を持ち帰れます。</h2>
+ <h2 class="ctr">たとえば、こんな場面に役立つ<br class="sp">方法を持ち帰れます。</h2>
  <ul class="happen">
   <li>「でも」「だって」と言い訳が返ってくる部下に、適切な指導をしたい</li>
   <li>同じミスをくり返す後輩に、やる気を下げずに改善を促したい</li>
@@ -732,7 +739,7 @@ h2.ctr,.sub-h{text-align:center}
   <div><dt>日時</dt><dd><span class="nw">2026年12月5日（土）</span><span class="nw">10:30〜12:00</span></dd></div>
   <div><dt>会場</dt><dd>品川駅周辺</dd></div>
   <div><dt>参加費</dt><dd><span class="nw">書籍持参の方 1,000円</span><br><span class="nw">サイン本付き 現地購入の方 2,760円</span><span class="nw">（本代込み）</span></dd></div>
-  <div><dt>定員</dt><dd>会場 50名</dd></div>
+  <div><dt>定員</dt><dd>50名</dd></div>
   <div><dt>お支払い</dt><dd>事前決済（クレジットカード［PayPal］／銀行振込）<small class="pnote">※PayPalアカウントをお持ちでない方も、クレジットカードでお支払いいただけます。<br>※コンビニ払いには対応しておりません。</small></dd></div>
   <div><dt>対象</dt><dd>部下を持つ上司・リーダーの方</dd></div>
  </dl>
