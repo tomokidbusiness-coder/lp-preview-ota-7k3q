@@ -767,6 +767,29 @@ h2.ctr,.sub-h{text-align:center}
  .hero .hphoto{aspect-ratio:1/.95!important;object-position:60% 6%!important}
  .hero .hset::after{top:calc(var(--W) * .95 * .7);height:calc(var(--W) * .95 * .3)}
 }
+/* 11/1 写真・本・名前と肩書き・実績バッジをBtoC版と同じ作りに */
+.hero .c5ph{position:relative}
+.hero .c5ph img{width:100%;display:block;border-radius:16px;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%}
+.hero .c5ph:after{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;border-radius:0 0 16px 16px;background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.96) 45%,#fff);pointer-events:none}
+.hero .c5ph .c5book{position:absolute;z-index:3;right:-40px;top:44%;width:118px;aspect-ratio:auto;object-fit:contain;border-radius:3px;box-shadow:0 8px 18px rgba(29,59,87,.22)}
+.hero .c5badges{display:grid;grid-template-columns:repeat(4,1fr);position:absolute;left:-5%;right:-5%;bottom:-2%;z-index:2;margin:0;max-width:none;gap:2px}
+.hero .c5nm{margin:22px 0 0;text-align:center;font-size:15px;font-weight:700;line-height:1.5;color:var(--ink)}
+.hero .c5nm b{font-size:26px;font-weight:900;margin:0 .4em}
+@media(min-width:760px){
+ .hero .wrap{display:grid!important;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;width:auto!important;max-width:1260px;margin:0 auto;padding:44px 40px 44px!important;position:relative}
+ .hero .hl{margin-left:0!important;max-width:none!important;width:100%}
+ .hero .hr{position:relative!important;inset:auto!important;width:auto!important;height:auto!important;display:block!important;margin-right:40px}
+ .hero h1.stair.two{font-size:min(6.6rem,calc((min(100vw,1260px) - 116px) * .55 / 9.3))!important}
+}
+@media(max-width:759px){
+ .hero .hr{height:auto!important;width:100%}
+ .hero .c5ph{width:100%;margin:4px auto 0}
+ .hero .c5ph img{aspect-ratio:auto;height:290px;object-position:50% 14%}
+ .hero .c5ph .c5book{right:12px;left:auto;top:26%;width:70px;height:auto}
+ .hero .c5badges{grid-template-columns:repeat(4,1fr);gap:0;left:1%;right:1%;bottom:1%}
+ .hero .c5ph .c5bd .md span{font-size:10.5px;letter-spacing:0;margin-bottom:1px}.hero .c5ph .c5bd .md b{font-size:22px}.hero .c5ph .c5bd .md b.w{font-size:19px}.hero .c5ph .c5bd .md em{font-size:10.5px;margin-top:1px}
+ .hero .c5nm{margin-top:12px;font-size:12.5px}.hero .c5nm b{font-size:21px}
+}
 </style></head><body>
 
 
@@ -791,13 +814,16 @@ h2.ctr,.sub-h{text-align:center}
   </div>
   <p class="corp-wrap"><a class="corp-link" href="mailto:office@i-career.co.jp?subject=%E6%B3%95%E4%BA%BA%E3%83%BB%E8%A4%87%E6%95%B0%E5%90%8D%E3%81%A7%E3%81%AE%E3%81%8A%E7%94%B3%E8%BE%BC%E3%81%BF%EF%BC%88%E8%AB%8B%E6%B1%82%E6%9B%B8%E6%89%95%E3%81%84%EF%BC%89">▶ 法人・複数名でのお申込み(請求書払い)はこちら</a></p>
  </div>
- <div class="hr"><div class="hset"><img class="hphoto" src="img/ota.jpg" alt="太田章代"><img class="hbook" src="img/cover.png" alt="書籍表紙『リーダー1年目の叱り方の教科書』"><p class="hcap"><small>著者／アイキャリア株式会社<br class="pcbr"><span class="sp-sp"> </span>代表取締役<br>人材育成トレーナー</small><b>太田章代</b></p>
-  <div class="hbadges">
+ <div class="hr c5r"><div class="c5ph"><img src="img/ota_c.jpg" alt="太田章代"><img class="c5book" src="img/cover.png" alt="書籍表紙『リーダー1年目の叱り方の教科書』">
+  <div class="c5badges">
    <div class="c5bd"><svg class="wr"><use href="#wreath"/></svg><div class="md"><span>受講者</span><b>5<small class="u">万人</small></b><em>（延べ）</em></div></div>
    <div class="c5bd"><svg class="wr"><use href="#wreath"/></svg><div class="md"><span>研修・講演</span><b class="w">2,000</b><em>回以上</em></div></div>
    <div class="c5bd"><svg class="wr"><use href="#wreath"/></svg><div class="md"><span>講師歴</span><b>20</b><em>年以上</em></div></div>
    <div class="c5bd"><svg class="wr"><use href="#wreath"/></svg><div class="md"><span>YouTube</span><b>4.3</b><em>万人登録</em></div></div>
-  </div></div></div>
+  </div>
+ </div>
+ <p class="c5nm">人材育成トレーナー<b>太田章代</b><br>アイキャリア株式会社 代表取締役</p>
+</div>
 </div></div>
 
 
