@@ -653,6 +653,19 @@ h2.ctr,.sub-h{text-align:center}
 .c5top{background:linear-gradient(135deg,#e3eff9 0%,#f4f9fd 28%,#fff 46%,#fff 54%,#fdf3f1 72%,#fbe3de 100%)}
 .c5ph:after{background:linear-gradient(180deg,rgba(253,240,237,0),rgba(253,240,237,.96) 45%,#fcebe7)}
 @media(max-width:759px){.c5top{background:linear-gradient(170deg,#e3eff9 0%,#fff 35%,#fff 60%,#fbe3de 100%)}}
+/* 11/1 スマホのトップの並び：見出し→サブ→写真→開催概要→ボタン */
+@media(max-width:759px){
+ .c5in{display:flex;flex-direction:column;gap:0;align-items:stretch}
+ .c5top .c5h1{font-size:min(35px,calc((100vw - 36px)/10))}
+ .c5top .c5day{font-size:min(22px,calc((100vw - 60px)/14.5))}
+ .c5l{display:contents}
+ .c5label{order:1;align-self:flex-start}
+ .c5h1{order:2}
+ .c5sub{order:3;margin-bottom:14px}
+ .c5r{order:4;margin-bottom:20px}
+ .c5tk{order:5;width:100%;max-width:none}
+ .c5top .c5btns{order:6}
+}
 /* 11/1 トップの文字を全体に大きく */
 .c5label{font-size:16px}
 .c5sub{font-size:28px}
