@@ -629,7 +629,7 @@ h2.ctr,.sub-h{text-align:center}
 }
 /* 11/1 見出しを3行の階段に：左上から右下へずれていく＋読み込み時に1行ずつスライド */
 .hero h1.stair{line-height:1.12;white-space:nowrap;justify-self:start;text-align:left}
-.hero h1.stair span{display:block}
+.hero h1.stair>span{display:block}
 .hero h1.stair .l2{padding-left:1.1em}
 .hero h1.stair .l3{padding-left:2.2em}
 .hero h1.stair::after{margin-left:2.25em}
@@ -641,12 +641,42 @@ h2.ctr,.sub-h{text-align:center}
  .hero h1.stair::after{margin:12px 0 0 2.25em}
 }
 @media(prefers-reduced-motion:no-preference){
- .hero h1.stair span{animation:stairIn .7s cubic-bezier(.2,.7,.2,1) both}
+ .hero h1.stair>span{animation:stairIn .7s cubic-bezier(.2,.7,.2,1) both}
  .hero h1.stair .l2{animation-delay:.25s}
  .hero h1.stair .l3{animation-delay:.5s}
  .hero h1.stair::after{animation:stairIn .7s .75s cubic-bezier(.2,.7,.2,1) both}
 }
 @keyframes stairIn{from{opacity:0;transform:translate(-.6em,-.25em)}to{opacity:1;transform:none}}
+/* 11/1 ともきさん指示：書名の札は1行で大きく／見出しは斜めを強めに（成長は「の」の下、叱り方は「ための」の下から）／見出しの中心に全部そろえる／叱り方にオレンジの下線 */
+.hero .kind{white-space:nowrap;text-align:center}
+.hero .kind b,.hero .kind span{display:inline!important;font-size:1em!important;margin:0!important}
+.hero h1.stair .l2{padding-left:2em}
+.hero h1.stair .l3{padding-left:5em}
+.hero h1.stair::after{display:none}
+.hero h1.stair .ul{background:linear-gradient(var(--red),var(--red)) 0 96%/100% .13em no-repeat;padding-bottom:.06em}
+.hero h1.stair{justify-self:center!important}
+.hero .hsub{justify-self:center;text-align:center}
+.hero .hday,.hero .hinfo,.hero .btns.two,.hero .corp-wrap{justify-self:center;margin-inline:auto}
+@media(min-width:760px){
+ .hero .hl{justify-items:center}
+ .hero .kind{font-size:clamp(17px,1.65vw,22px)!important;padding:.45em 1.2em}
+ .hero h1.stair{font-size:min(6.4rem,calc(min(56vw,800px)/8.2))!important}
+ .hero .hday,.hero .hinfo,.hero .btns.two,.hero .corp-wrap{max-width:600px}
+ .hero .hday b,.hero .hday b small,.hero .hday span{font-size:34px!important}
+ .hero .hinfo{font-size:18px}
+ .hero .btns.two .btn{font-size:16px}
+ .corp-link{font-size:16px}
+}
+@media(max-width:759px){
+ .hero .kind{font-size:min(15px,calc((100vw - 56px)/26))!important;padding:.5em .9em}
+ .hero h1.stair{font-size:min(3.4rem,calc((100vw - 36px)/8.2))!important}
+ .hero .hinfo{font-size:16px}
+ .hero .hday b,.hero .hday b small,.hero .hday span{font-size:23px!important}
+}
+@media(prefers-reduced-motion:no-preference){
+ .hero h1.stair .ul{animation:ulIn .6s .9s ease-out both}
+}
+@keyframes ulIn{from{background-size:0 .13em}to{background-size:100% .13em}}
 </style></head><body>
 
 
@@ -654,7 +684,7 @@ h2.ctr,.sub-h{text-align:center}
 <div class="hero"><i class="c3"></i><i class="c4"></i><div class="wrap">
  <div class="hl">
   <p class="kind"><b>『リーダー1年目の叱り方の教科書』</b><span>出版記念セミナー</span></p>
-  <h1 class="stair"><span class="l1">部下の</span><span class="l2">成長のための</span><span class="l3">叱り方</span></h1>
+  <h1 class="stair"><span class="l1">部下の</span><span class="l2">成長のための</span><span class="l3"><span class="ul">叱り方</span></span></h1>
   <p class="hsub">部下が伸びる伝え方を習得する<b>90分</b></p>
   <p class="hday"><b>12/5<small>（土）</small></b><span>10:30〜12:00</span></p>
   <dl class="hdate hinfo">
