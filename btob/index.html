@@ -695,6 +695,18 @@ h2.ctr,.sub-h{text-align:center}
  .hero .b2{animation-delay:1.55s}
 }
 @keyframes bubIn{from{opacity:0}to{opacity:1}}
+/* 11/1 吹き出しをおしゃれに：枠なしの丸い雲＋影、心の声の「ぽつぽつ」で見出しへつなぐ */
+@media(min-width:760px){
+ .hero .bub{border:0;border-radius:999px;padding:.7em 1.4em;font-size:clamp(14px,1.2vw,16px);font-weight:700;letter-spacing:.02em;background:#fff;color:var(--ink);box-shadow:0 10px 24px rgba(29,59,87,.12),0 1px 0 rgba(29,59,87,.06)}
+ .hero .bub::before,.hero .bub::after{content:"";position:absolute;border:0;border-radius:50%;background:#fff;box-shadow:0 4px 10px rgba(29,59,87,.12);transform:none;margin:0}
+ .hero .b1{transform:rotate(-2deg)}
+ .hero .b1::before{width:12px;height:12px;left:26px;bottom:-15px;right:auto;top:auto}
+ .hero .b1::after{width:7px;height:7px;left:16px;bottom:-26px;right:auto;top:auto}
+ .hero .b2{background:var(--sky);transform:rotate(2deg)}
+ .hero .b2::before{width:12px;height:12px;right:-16px;top:40%;left:auto;bottom:auto;background:var(--sky)}
+ .hero .b2::after{width:7px;height:7px;right:-28px;top:62%;left:auto;bottom:auto;background:var(--sky)}
+ .hero .bub b{color:var(--red);font-weight:900}
+}
 </style></head><body>
 
 
