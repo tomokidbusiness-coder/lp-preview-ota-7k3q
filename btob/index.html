@@ -707,6 +707,21 @@ h2.ctr,.sub-h{text-align:center}
  .hero .b2::after{width:7px;height:7px;right:-28px;top:62%;left:auto;bottom:auto;background:var(--sky)}
  .hero .bub b{color:var(--red);font-weight:900}
 }
+/* 11/1 吹き出しをやめ、見出しの後ろに「成長の矢印」（左下→右上へ上がっていく点線） */
+.hero .bub{display:none!important}
+.hero h1.stair{position:relative;z-index:0}
+.hero h1.stair .grow{position:absolute;left:0;top:0;width:100%;height:100%;z-index:-1;overflow:visible;pointer-events:none}
+.hero .grow path{fill:none;stroke:var(--red);stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.hero .grow .g-line{stroke-width:7px;stroke-dasharray:.1 17;opacity:.55}
+.hero .grow .g-head{stroke-width:7px;opacity:.75}
+@media(max-width:759px){
+ .hero .grow .g-line{stroke-width:5px;stroke-dasharray:.1 11}
+ .hero .grow .g-head{stroke-width:5px}
+}
+@media(prefers-reduced-motion:no-preference){
+ .hero h1.stair .grow{animation:growIn 1.1s .8s cubic-bezier(.5,0,.2,1) both}
+}
+@keyframes growIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
 </style></head><body>
 
 
@@ -714,7 +729,7 @@ h2.ctr,.sub-h{text-align:center}
 <div class="hero"><i class="c3"></i><i class="c4"></i><div class="wrap">
  <div class="hl">
   <p class="kind"><b>『リーダー1年目の叱り方の教科書』</b><span>出版記念セミナー</span></p>
-  <h1 class="stair"><span class="l1">部下の</span><span class="l2">成長のための</span><span class="l3"><span class="ul">叱り方</span></span><i class="bub b1" aria-hidden="true">何度言っても直らない…</i><i class="bub b2" aria-hidden="true">言い訳ばかりする部下に…</i></h1>
+  <h1 class="stair"><span class="l1">部下の</span><span class="l2">成長のための</span><span class="l3"><span class="ul">叱り方</span></span><svg class="grow" viewBox="0 0 1000 336" preserveAspectRatio="none" aria-hidden="true"><path class="g-line" d="M30 318 C 330 300, 640 200, 930 52"/><path class="g-head" d="M868 46 L938 46 L926 114"/></svg></h1>
   <p class="hsub">部下が伸びる伝え方を習得する<b>90分</b></p>
   <p class="hday"><b>12/5<small>（土）</small></b><span>10:30〜12:00</span></p>
   <dl class="hdate hinfo">
