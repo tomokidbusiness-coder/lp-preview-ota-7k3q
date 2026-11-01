@@ -627,6 +627,26 @@ h2.ctr,.sub-h{text-align:center}
 @media(max-width:759px){
  .hero h1::after{margin:12px auto 0;width:52px;height:5px}
 }
+/* 11/1 見出しを3行の階段に：左上から右下へずれていく＋読み込み時に1行ずつスライド */
+.hero h1.stair{line-height:1.12;white-space:nowrap;justify-self:start;text-align:left}
+.hero h1.stair span{display:block}
+.hero h1.stair .l2{padding-left:1.1em}
+.hero h1.stair .l3{padding-left:2.2em}
+.hero h1.stair::after{margin-left:2.25em}
+@media(min-width:760px){
+ .hero h1.stair{font-size:min(6rem,calc(min(56vw,800px)/7.6))!important}
+}
+@media(max-width:759px){
+ .hero h1.stair{justify-self:center;font-size:min(3.3rem,calc((100vw - 40px)/7.3))!important}
+ .hero h1.stair::after{margin:12px 0 0 2.25em}
+}
+@media(prefers-reduced-motion:no-preference){
+ .hero h1.stair span{animation:stairIn .7s cubic-bezier(.2,.7,.2,1) both}
+ .hero h1.stair .l2{animation-delay:.25s}
+ .hero h1.stair .l3{animation-delay:.5s}
+ .hero h1.stair::after{animation:stairIn .7s .75s cubic-bezier(.2,.7,.2,1) both}
+}
+@keyframes stairIn{from{opacity:0;transform:translate(-.6em,-.25em)}to{opacity:1;transform:none}}
 </style></head><body>
 
 
@@ -634,7 +654,7 @@ h2.ctr,.sub-h{text-align:center}
 <div class="hero"><i class="c3"></i><i class="c4"></i><div class="wrap">
  <div class="hl">
   <p class="kind"><b>『リーダー1年目の叱り方の教科書』</b><span>出版記念セミナー</span></p>
-  <h1><span class="nw">部下の成長</span><span class="nw">のための</span><br><span class="nw">叱り方</span></h1>
+  <h1 class="stair"><span class="l1">部下の</span><span class="l2">成長のための</span><span class="l3">叱り方</span></h1>
   <p class="hsub">部下が伸びる伝え方を習得する<b>90分</b></p>
   <p class="hday"><b>12/5<small>（土）</small></b><span>10:30〜12:00</span></p>
   <dl class="hdate hinfo">
