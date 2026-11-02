@@ -711,6 +711,19 @@ h2.ctr,.sub-h{text-align:center}
 }
 /* 11/3 BtoB版に合わせる：スマホはトップのボタンを出さず、画面下の固定ボタンを常に表示 */
 @media(max-width:759px){.c5top .c5btns{display:none!important}}
+/* 11/3 スマホ：最初の画面で「アイキャリア株式会社 代表取締役」まで見えるように（写真の高さを画面の高さに合わせて縮める） */
+@media(max-width:759px){
+ .c5in{padding-top:18px}
+ .c5label{white-space:nowrap;font-size:min(12.5px,calc((100vw - 62px)/27))}
+ .c5sub{margin-bottom:10px}
+ .c5nm{margin-top:8px}
+ .c5ph img{height:clamp(155px,calc(100vh - var(--c5fix)),290px);height:clamp(155px,calc(100svh - var(--c5fix) - env(safe-area-inset-bottom)),290px)}
+ .c5top{--c5fix:392px}
+}
+@media(max-width:759px) and (max-height:620px){
+ .c5ph img{object-position:50% 6%}
+ .c5ph .c5book{width:54px;top:10%}
+}
 </style></head><body>
 
 
