@@ -709,6 +709,8 @@ h2.ctr,.sub-h{text-align:center}
  .c5top .c5btns,.sbar{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
  .c5top .c5btns .btn .bl,.sbar .btn .bl{font-size:min(1em,calc((50vw - 54px)/11))}
 }
+/* 11/3 BtoB版に合わせる：スマホはトップのボタンを出さず、画面下の固定ボタンを常に表示 */
+@media(max-width:759px){.c5top .c5btns{display:none!important}}
 </style></head><body>
 
 
@@ -748,8 +750,8 @@ h2.ctr,.sub-h{text-align:center}
 
 
 
-<!-- スマホ：画面下の固定ボタン（申込みボタンが画面に出ている間は隠す） -->
-<div class="sbar off" aria-label="申し込み">
+<!-- 画面下の固定ボタン（スマホは常に表示。パソコンはトップのボタンが見えている間だけ隠す） -->
+<div class="sbar" aria-label="申し込み">
  <a class="btn" href="https://my85p.com/p/r/w0bU6GAf"><span class="bl">本を持参して参加</span><small>1,000円</small></a>
  <a class="btn b" href="https://my85p.com/p/r/JHQ4uzpk"><span class="bl">サイン本購入つきで参加</span><small>2,760円<span class="yen">（本代込）</span></small></a>
 </div>
@@ -939,8 +941,8 @@ h2.ctr,.sub-h{text-align:center}
  (function(){
   var bar=document.querySelector('.sbar'),hb=document.querySelector('.c5top .btns');if(!bar||!hb||!('IntersectionObserver' in window))return;
   var heroVis=true;
-  function upd(){bar.classList.toggle('off',heroVis)}
-  new IntersectionObserver(function(es){heroVis=es[0].isIntersecting;upd()}).observe(document.querySelector('.c5top'));
+  function upd(){bar.classList.toggle('off',window.innerWidth>=760&&heroVis)}
+  new IntersectionObserver(function(es){heroVis=es[0].isIntersecting;upd()}).observe(hb);
   window.addEventListener('resize',upd);
  })();
  </script>
